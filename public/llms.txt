@@ -1,0 +1,21 @@
+# Tatkraft Marketing
+
+> Marketing engineering for AI search. Tatkraft helps small and mid-sized
+> AI-native SaaS companies become visible and cited in AI-driven discovery —
+> ChatGPT, Google AI Overviews and Perplexity — as well as traditional search.
+
+## Services
+- [SEO Services](https://tatkraft.nz/services/seo): search engine optimisation — the foundation AEO and GEO are built on top of.
+- [Content Architecture](https://tatkraft.nz/services/content-architecture): structuring sites and content so AI systems can parse, understand and cite them as a source.
+- [Technical Foundations](https://tatkraft.nz/services/technical-foundations): schema, structured data and AI crawler access.
+- [Agentic Content Engines](https://tatkraft.nz/services/agentic-content-engines): AI-enabled content production workflows built and handed over as an owned system.
+- [AI Tracking / Measurement](https://tatkraft.nz/services/ai-tracking-measurement): tracking visibility and citation across ChatGPT, Perplexity, AI Overviews and traditional search.
+
+## About
+- [About Jack Flewett](https://tatkraft.nz/about): 20+ years in senior digital growth leadership across global SaaS and AI-native businesses. Positions as a Marketing Engineer.
+
+## Insights
+- [Insights](https://tatkraft.nz/insights): writing on AI search, content architecture and growth engineering.
+
+## Contact
+- [Contact](https://tatkraft.nz/contact): jack@tatkraft.nz

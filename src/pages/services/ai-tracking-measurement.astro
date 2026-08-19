@@ -1,0 +1,43 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const schema = {
+	"@context": "https://schema.org",
+	"@type": "Service",
+	"name": "AI Tracking / Measurement",
+	"provider": { "@type": "Organization", "name": "Tatkraft Marketing" },
+	"areaServed": ["NZ", "AU"],
+	"description": "Tracking whether you're actually being cited by ChatGPT, Perplexity and AI Overviews — not just where you rank on a results page."
+};
+---
+
+<Layout
+	title="AI Search Visibility & Rank Tracking"
+	description="AI search visibility and rank tracking — measuring whether you're actually being cited by ChatGPT, Perplexity and AI Overviews, not just where you rank on a results page."
+	schema={schema}
+>
+	<h1>AI Tracking / Measurement</h1>
+	<p class="tagline">You can't improve what you're not measuring.</p>
+
+	<p>
+		Rank tracking alone doesn't tell you whether an AI system is actually citing
+		you. Measurement needs to cover both worlds — traditional search rankings and
+		your visibility inside AI-generated answers — so you know what's working and
+		where to focus next.
+	</p>
+	<p>
+		In other words: SEO rank tracking plus AEO and GEO citation tracking, reported
+		side by side rather than treated as separate disciplines.
+	</p>
+
+	<h2>What this covers</h2>
+	<ul>
+		<li>AI citation tracking across ChatGPT, Perplexity, Google AI Overviews, Gemini, Copilot and Claude</li>
+		<li>Traditional search rank tracking</li>
+		<li>Share-of-answer reporting</li>
+		<li>Reporting dashboards tied to leading indicators, not vanity metrics</li>
+		<li>Ongoing visibility audits as models and algorithms change</li>
+	</ul>
+
+	<a class="cta" href="/contact">Get in touch</a>
+</Layout>

@@ -1,0 +1,72 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const schema = {
+	"@context": "https://schema.org",
+	"@type": "ProfilePage",
+	"mainEntity": {
+		"@type": "Person",
+		"name": "Jack Flewett",
+		"jobTitle": "Marketing Engineer",
+		"worksFor": { "@type": "Organization", "name": "Tatkraft Marketing" },
+		"sameAs": ["https://www.linkedin.com/in/jack-flewett-58b8964/"]
+	}
+};
+---
+
+<Layout
+	title="About"
+	description="Jack Flewett — 20+ years in senior digital growth leadership across global SaaS and AI-native businesses. Now building Tatkraft Marketing."
+	schema={schema}
+>
+	<h1>About</h1>
+	<p class="tagline">Jack Flewett, Marketing Engineer.</p>
+
+	<p>
+		Twenty years in digital and growth marketing across global SaaS and AI-native
+		businesses, at senior and executive level — owning digital acquisition and
+		growth strategy across multiple international markets.
+	</p>
+
+	<p>
+		My experience and track record allow me to consult on strategic growth
+		marketing — I've managed multi-million dollar annual budgets and scaled teams
+		from a handful of specialists to dozens, delivering sustained double-digit lead
+		growth over years rather than quarters. But I'm just as comfortable rolling up
+		my sleeves with smaller clients and leaner budgets. I've kept my hands on the
+		tools throughout, not just the strategy, and stayed current with what's
+		genuinely cutting edge — most recently building AI-enabled content systems that
+		materially increased qualified leads and search visibility within months, not
+		years.
+	</p>
+
+	<p>
+		I'm especially passionate about supporting New Zealand businesses — helping
+		local companies grow and compete using the same calibre of thinking usually
+		reserved for much bigger budgets.
+	</p>
+
+	<h2>Marketing Engineer</h2>
+	<p>
+		An emerging title describing a full-stack marketer with the skills of a builder —
+		someone who works at the system level to automate at the campaign level, rather
+		than executing channel-by-channel. That's the position Tatkraft Marketing
+		operates from: growth outcomes, built with AI-native systems.
+	</p>
+
+	<h2>Backed by a trusted network</h2>
+	<p>
+		Behind every engagement sits a hand-picked network of specialist freelancers —
+		people I've worked alongside for years, in areas like technical SEO and data
+		integration, brought in exactly when a project needs that extra depth. You get
+		senior strategic ownership from me, backed by specialist firepower on tap —
+		without ever paying for a bloated team.
+	</p>
+
+	<a class="cta" href="/contact">Get in touch</a>
+
+	<p>
+		Full career history available on&nbsp;
+		<a href="https://www.linkedin.com/in/jack-flewett-58b8964/">LinkedIn</a>.
+	</p>
+</Layout>

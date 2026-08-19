@@ -1,23 +1,122 @@
+---
+interface Props {
+	title: string;
+	description: string;
+	schema?: Record<string, unknown> | Record<string, unknown>[];
+}
+const { title, description, schema } = Astro.props;
+const schemaList = schema ? (Array.isArray(schema) ? schema : [schema]) : [];
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+
+const baseSchema = {
+	"@context": "https://schema.org",
+	"@type": "ProfessionalService",
+	"name": "Tatkraft Marketing",
+	"url": "https://tatkraft.nz",
+	"description": "Marketing engineering for AI search. Tatkraft helps small and mid-sized AI-native SaaS companies become visible and cited in AI-driven discovery.",
+	"areaServed": ["NZ", "AU"],
+	"email": "jack@tatkraft.nz",
+	"founder": {
+		"@type": "Person",
+		"name": "Jack Flewett",
+		"jobTitle": "Marketing Engineer",
+		"sameAs": ["https://www.linkedin.com/in/jack-flewett-58b8964/"]
+	}
+};
+---
+
 <!doctype html>
 <html lang="en">
 	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width" />
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
+		<link rel="canonical" href={canonicalURL} />
+		<title>{title} | Auckland, NZ | Tatkraft Marketing</title>
+		<meta name="description" content={description} />
+
+		<meta property="og:title" content={`${title} | Auckland, NZ | Tatkraft Marketing`} />
+		<meta property="og:description" content={description} />
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content={canonicalURL} />
+
+		<script type="application/ld+json" set:html={JSON.stringify(baseSchema)} />
+		{schemaList.map((s) => <script type="application/ld+json" set:html={JSON.stringify(s)} />)}
+
+		<!-- Google tag (gtag.js) -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-JJXQT9XHB1"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+			gtag('config', 'G-JJXQT9XHB1');
+		</script>
 	</head>
 	<body>
-		<slot />
+		<header>
+			<nav>
+				<a href="/" class="logo">
+					<strong>tatkraft</strong>
+					<span class="nav-tagline">Engineering for AI search</span>
+				</a>
+				<div class="links">
+					<a href="/services">Services</a>
+					<a href="/about">About</a>
+					<a href="/insights">Insights</a>
+					<a href="/contact">Contact</a>
+				</div>
+			</nav>
+		</header>
+		<main>
+			<slot />
+		</main>
+		<footer>
+			<p>Tatkraft Marketing — Engineering for AI search. Auckland, New Zealand.</p>
+			<p><a href="mailto:jack@tatkraft.nz">jack@tatkraft.nz</a></p>
+		</footer>
+		<style>
+			:global(body) {
+				max-width: 760px;
+				margin: 0 auto;
+				padding: 1.5rem;
+				font-family: system-ui, sans-serif;
+				line-height: 1.6;
+				color: #1a1a1a;
+			}
+			nav {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				padding-bottom: 1.5rem;
+				border-bottom: 1px solid #ddd;
+				margin-bottom: 2rem;
+			}
+			.logo { text-decoration: none; color: inherit; font-size: 1.1rem; display: flex; flex-direction: column; line-height: 1.3; }
+			.nav-tagline { font-size: 0.7rem; font-weight: 600; color: #3D6B52; text-transform: uppercase; letter-spacing: 0.03em; }
+			.links a { margin-left: 1.2rem; color: inherit; }
+			footer {
+				margin-top: 3rem;
+				padding-top: 1.5rem;
+				border-top: 1px solid #ddd;
+				font-size: 0.85rem;
+				color: #666;
+			}
+			:global(h1) { font-size: 2rem; margin-bottom: 0.5rem; }
+			:global(h2) { font-size: 1.4rem; margin-top: 2.5rem; }
+			:global(h3) { font-size: 1.1rem; margin-top: 1.5rem; }
+			:global(.tagline) { color: #3D6B52; font-weight: 600; margin-top: 0; }
+			:global(.subline) { color: #444; font-weight: 400; margin-top: 0; font-size: 1.1rem; }
+			:global(.faq dt) { font-weight: 600; margin-top: 1rem; }
+			:global(.faq dd) { margin-left: 0; margin-top: 0.3rem; }
+			:global(.cta) {
+				display: inline-block;
+				margin-top: 1.5rem;
+				padding: 0.7rem 1.4rem;
+				background: #1E211D;
+				color: #fff;
+				text-decoration: none;
+				border-radius: 4px;
+			}
+		</style>
 	</body>
 </html>
-
-<style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
-</style>

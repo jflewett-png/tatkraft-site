@@ -1,0 +1,53 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const schema = {
+	"@context": "https://schema.org",
+	"@type": "Service",
+	"name": "SEO Services",
+	"provider": { "@type": "Organization", "name": "Tatkraft Marketing" },
+	"areaServed": ["NZ", "AU"],
+	"description": "Search engine optimisation for small and mid-sized companies — the foundation that AEO and GEO are built on top of."
+};
+---
+
+<Layout
+	title="SEO Services"
+	description="Search engine optimisation for small and mid-sized companies — the foundation that AEO and GEO are built on top of."
+	schema={schema}
+>
+	<h1>SEO Services</h1>
+	<p class="tagline">The foundation everything else is built on.</p>
+
+	<p>
+		Search engine optimisation hasn't gone away — it's the base layer that AEO and
+		GEO are built on top of. Good SEO still means a technically sound site, content
+		that genuinely answers what people are searching for, and the authority to earn
+		trust. Get that right and you're already most of the way to being found by AI
+		systems too.
+	</p>
+
+	<h2>What this covers</h2>
+	<ul>
+		<li>SEO audits and strategy</li>
+		<li>Keyword and search intent research</li>
+		<li>On-page SEO</li>
+		<li>Technical SEO</li>
+		<li>Site structure and internal linking</li>
+		<li>Content strategy aligned to search demand</li>
+		<li>Off-page SEO and authority building</li>
+		<li>Rank tracking and reporting</li>
+	</ul>
+
+	<h2>Where AEO and GEO fit in</h2>
+	<p>
+		Answer Engine Optimization (AEO) and Generative Engine Optimization (GEO) are
+		the newer disciplines focused specifically on being understood and cited by
+		ChatGPT, Perplexity and Google AI Overviews. They don't replace SEO — they
+		extend it. See <a href="/services/content-architecture">Content Architecture</a>
+		and <a href="/services/technical-foundations">Technical Foundations</a> for how
+		we approach that layer specifically.
+	</p>
+
+	<a class="cta" href="/contact">Get in touch</a>
+</Layout>

@@ -1,0 +1,46 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const schema = {
+	"@context": "https://schema.org",
+	"@type": "Service",
+	"name": "Technical Foundations",
+	"provider": { "@type": "Organization", "name": "Tatkraft Marketing" },
+	"areaServed": ["NZ", "AU"],
+	"description": "Schema, structured data and crawler access — the technical foundations most sites get wrong without realising it."
+};
+---
+
+<Layout
+	title="Technical SEO & AI Crawler Access"
+	description="Technical SEO, schema and AI crawler access — the technical foundations most sites get wrong without realising it."
+	schema={schema}
+>
+	<h1>Technical Foundations</h1>
+	<p class="tagline">The plumbing that decides whether AI systems can even read you.</p>
+
+	<p>
+		Before any content strategy matters, AI crawlers and search engines need to be
+		able to access, parse and trust your site. A surprising number of sites are
+		quietly blocking the crawlers they're trying to be found by, or missing the
+		structured data that tells a machine what a page actually is.
+	</p>
+	<p>
+		This is technical SEO — still the same discipline it's always been, now doing
+		double duty for the AI crawlers and language models behind AEO and GEO as well
+		as traditional search engines.
+	</p>
+
+	<h2>What this covers</h2>
+	<ul>
+		<li>Schema and structured data markup</li>
+		<li>AI crawler access and permissions (llms.txt, robots.txt)</li>
+		<li>Technical SEO audits</li>
+		<li>Indexation and crawlability fixes</li>
+		<li>Site speed and Core Web Vitals</li>
+		<li>Site migrations without losing visibility</li>
+		<li>Ongoing structured data testing and monitoring</li>
+	</ul>
+
+	<a class="cta" href="/contact">Get in touch</a>
+</Layout>

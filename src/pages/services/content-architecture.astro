@@ -1,0 +1,46 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const schema = {
+	"@context": "https://schema.org",
+	"@type": "Service",
+	"name": "Content Architecture",
+	"provider": { "@type": "Organization", "name": "Tatkraft Marketing" },
+	"areaServed": ["NZ", "AU"],
+	"description": "Structuring your site and content so AI systems and search engines can parse, understand and cite you as a source."
+};
+---
+
+<Layout
+	title="AEO & GEO Content Architecture"
+	description="Answer Engine Optimization (AEO) and Generative Engine Optimization (GEO) content architecture — structuring your site so AI systems and search engines can parse, understand and cite you as a source."
+	schema={schema}
+>
+	<h1>Content Architecture</h1>
+	<p class="tagline">Structure your site so AI systems can actually understand it.</p>
+
+	<p>
+		Most sites are built for a human scrolling down a page, not for a language model
+		trying to extract a clear answer. Content architecture is about closing that gap
+		— organising your topics, pages and internal links so both people and AI systems
+		can find, parse and trust what you've written.
+	</p>
+	<p>
+		This is the foundation of what's often called AEO (Answer Engine Optimization)
+		or GEO (Generative Engine Optimization) — the newer disciplines built on top of
+		traditional SEO for a search landscape where AI systems generate the answer.
+	</p>
+
+	<h2>What this covers</h2>
+	<ul>
+		<li>Topical mapping and content gap analysis</li>
+		<li>Site structure and information architecture</li>
+		<li>Internal linking strategy</li>
+		<li>Answer-first content formatting</li>
+		<li>Content audits against current search and AI visibility</li>
+		<li>FAQ and structured Q&amp;A content</li>
+		<li>Editorial guidelines and content governance</li>
+	</ul>
+
+	<a class="cta" href="/contact">Get in touch</a>
+</Layout>

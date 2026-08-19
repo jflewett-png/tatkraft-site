@@ -1,0 +1,69 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const schema = {
+	"@context": "https://schema.org",
+	"@type": "ItemList",
+	"itemListElement": [
+		{ "@type": "Service", "position": 1, "name": "SEO Services", "url": "https://tatkraft.nz/services/seo" },
+		{ "@type": "Service", "position": 2, "name": "Content Architecture", "url": "https://tatkraft.nz/services/content-architecture" },
+		{ "@type": "Service", "position": 3, "name": "Technical Foundations", "url": "https://tatkraft.nz/services/technical-foundations" },
+		{ "@type": "Service", "position": 4, "name": "Agentic Content Engines", "url": "https://tatkraft.nz/services/agentic-content-engines" },
+		{ "@type": "Service", "position": 5, "name": "AI Tracking / Measurement", "url": "https://tatkraft.nz/services/ai-tracking-measurement" }
+	]
+};
+---
+
+<Layout
+	title="SEO & AI Search Services"
+	description="SEO, AEO and GEO services — SEO, content architecture, technical SEO, AI content production and AI search rank tracking, working together or standing alone."
+	schema={schema}
+>
+	<h1>Services</h1>
+	<p class="tagline">Four capabilities, working together or standing alone.</p>
+
+	<p>
+		Start with one area, wherever you need it most, or bring them together as a
+		unified strategy.
+	</p>
+
+	<h2>SEO Services</h2>
+	<p>
+		Search engine optimisation — the foundation everything else is built on. Still
+		the base layer AEO and GEO extend, not something they replace.
+	</p>
+	<a class="cta" href="/services/seo">Learn more</a>
+
+	<h2>Content Architecture</h2>
+	<p>
+		Structuring your site and content so AI systems can actually parse, understand,
+		and cite you as a source — not just crawl past you.
+	</p>
+	<a class="cta" href="/services/content-architecture">Learn more</a>
+
+	<h2>Technical Foundations</h2>
+	<p>
+		Schema, structured data, and the crawler access most sites get wrong — or block
+		entirely without realising it.
+	</p>
+	<a class="cta" href="/services/technical-foundations">Learn more</a>
+
+	<h2>Agentic Content Engines</h2>
+	<p>
+		An AI-enabled production workflow that keeps content shipping at the pace AI
+		search actually demands, built and handed over as a system you own.
+	</p>
+	<a class="cta" href="/services/agentic-content-engines">Learn more</a>
+
+	<h2>AI Tracking / Measurement</h2>
+	<p>
+		Tracking whether you're actually being cited by ChatGPT, Perplexity and AI
+		Overviews — not just where you rank on a results page fewer people scroll
+		through every year.
+	</p>
+	<a class="cta" href="/services/ai-tracking-measurement">Learn more</a>
+
+	<h2>Not sure which fits?</h2>
+	<p>Get in touch and we'll figure it out together.</p>
+	<a class="cta" href="/contact">jack@tatkraft.nz</a>
+</Layout>
